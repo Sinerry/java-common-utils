@@ -3,6 +3,10 @@ package com.zeroten.common.util;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
+/*
+* TDD，测试驱动开发，编写测试用例
+* */
 public class CheckUtilsTest {
     @Test
     public void testIsAnyEmpty() {
@@ -34,6 +38,11 @@ public class CheckUtilsTest {
         Assert.assertEquals(CheckUtils.equals(100,null),false);
         Assert.assertEquals(CheckUtils.equals(100,200),false);
         Assert.assertEquals(CheckUtils.equals(100,100),true);
+    }
+
+    @Test
+    public void testReplaceLast() {
+        Assert.assertEquals(CheckUtils.replaceLast("java is use very useful","use","news"),"java is use very newsful");
     }
 
 }

@@ -40,4 +40,15 @@ public class CheckUtils {
        }
        return n1.intValue() == n2.intValue();
     }
+
+    public static String replaceLast(String src,String old,String now) {
+        int start = src.lastIndexOf(old);
+        char[] chs = src.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < chs.length; i++) {
+            sb.append(chs[i]);
+        }
+        sb.replace(start,start + old.length(),now);
+        return sb.toString();
+    }
 }
